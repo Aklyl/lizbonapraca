@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif; /* Ustaw czcionkę na Poppins */
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  background-image: url('zdjecie2.jpg'); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.App {
+  text-align: center;
+  max-width: 1200px; /* Increased width for a larger layout */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.section {
+  background-color: #ffffff; /* White background for sections */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-bottom: 30px; /* Increased spacing between sections */
+  padding: 40px; /* Increased padding for larger sections */
+  animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+}
+
+.App-header {
+  text-align: center;
+  background-color: #4caf50; /* Smooth green for the header */
+  color: #ffffff;
+  padding: 30px; /* Increased padding for a larger header */
+  border-radius: 12px; /* Rounded corners */
+  margin-bottom: 30px;
+  animation: slideDown 1,5s ease-in-out; /* Slide-down animation */
+}
+
+.App-header h1 {
+  font-size: 3rem; /* Larger font size for the header title */
+  margin: 0;
+}
+
+.App-header p {
+  font-size: 1.5rem; /* Larger font size for the header subtitle */
+  margin-top: 10px;
+}
+
+.project-header {
+  text-align: center;
+  color: #1877f2; /* Niebieski kolor w stylu Facebooka */
+  padding: 20px; /* Odstępy wewnętrzne */
+  font-size: 2rem; /* Rozmiar czcionki */
+  font-weight: bold;
+  margin-bottom: 20px; /* Odstęp poniżej nagłówka */
+  border-radius: 12px; /* Zaokrąglone rogi */
+  box-shadow: none; /* Usuń cień */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  animation: fadeIn 1.5s ease-in-out; /* Fade-in animation */
+}
+
+form input,
+form textarea {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #7c7c7c; /* Light green-gray border */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 1rem;
+}
+
+form input[type="text"] {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #d1e7d6; /* Light green-gray border */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 1rem;
+}
+
+form button {
+  background-color: #5f855f; /* Smooth green for buttons */
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px; /* Rounded corners */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+  background-color: #133A1B; /* Darker green on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.posts {
+  text-align: left;
+  background-color: #180404ec;
+  padding: 20px;
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  animation: fadeIn 2s ease-in-out; /* Fade-in animation */
+}
+
+.posts h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  color: #ffffff; /* Smooth green for headings */
+}
+
+.posts-logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.posts-logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.post {
+  background-color: #dcdcdc; /* Szare tło dla całego posta */
+  border: 1px solid #d1e7d6; /* Szara ramka */
+  border-radius: 12px; /* Zaokrąglone rogi */
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtelny cień */
+  overflow: hidden; /* Ukryj nadmiar zawartości */
+}
+
+.post-header {
+  background-color: #406940; /* Zielone tło */
+  color: white; /* Biały tekst */
+  padding: 10px; /* Odstępy wewnętrzne */
+  font-size: 1rem; /* Rozmiar czcionki */
+  display: flex; /* Ustaw elementy w jednej linii */
+  justify-content: space-between; /* Rozdziel elementy */
+  align-items: center; /* Wyrównaj elementy w pionie */
+}
+
+.post-header p {
+  margin: 0; /* Usuń domyślne marginesy */
+}
+
+.category {
+  font-weight: bold;
+  margin-left: 5px;
+  color: #dbe6e0; /* Jasny zielony kolor dla kategorii */
+}
+
+.post-content {
+  padding: 15px; /* Odstępy wewnętrzne dla treści posta */
+  color: #333; /* Kolor tekstu */
+}
+
+.post-content p {
+  margin: 10px 0; /* Odstępy między akapitami */
+}
+
+.post-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 8px; /* Zaokrąglone rogi */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtelny cień */
+}
+
+button.delete-button {
+  background-color: #2f4f4f; /* Ciemnoszary dla przycisku */
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 8px; /* Zaokrąglone rogi */
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.delete-button:hover {
+  background-color: #0f0000; /* Ciemniejszy czerwony na hover */
+  transform: scale(1.05); /* Subtelne powiększenie */
+}
+
+.post:last-child {
+  margin-bottom: 0;
+}
+
+.post p {
+  margin: 5px 0;
+}
+
+.post strong {
+  color: white; /* Biały kolor dla nazw użytkowników */
+  font-weight: bold;
+}
+
+.comment strong {
+  color: #2d2d2d; /* Czarny kolor dla nazw użytkowników */
+  font-weight: bold; /* Wyróżnij nazwę użytkownika */
+}
+
+footer {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #666;
+  background-color: #bebebe;
+  padding: 10px;
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 2s ease-in-out; /* Fade-in animation */
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Rozdziel nazwę strony i zakładki */
+  background-color: #133A1B; /* Smooth green for navbar */
+  padding: 15px;
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.site-title {
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* Czcionka w stylu Facebooka */
+  font-size: 1.5rem; /* Duży rozmiar czcionki */
+  font-weight: bold; /* Pogrubienie */
+  color: #E4DEAE; /* Niebieski kolor Facebooka */
+  text-align: center; /* Wyśrodkowanie tekstu */
+  margin: 10px 0; /* Odstępy wokół nazwy */
+}
+
+.site-title img {
+  max-width: 100px; /* Adjust the size of the logo */
+  height: auto;
+  display: inline-block;
+  vertical-align: middle; /* Align the logo with text if needed */
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Odstęp między zakładkami */
+}
+
+.navbar a {
+  color: #E4DEAE;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #1b461d; /* Darker green on hover */
+}
+
+.navbar-username {
+  color: #ffffff;
+  background-color: #133A1B;
+  padding: 5px 10px;
+  border-radius: 8px;
+  margin-left: 10px;
+}
+
+.login-form {
+  background-color: #ffffff;
+  padding: 40px; /* Increased padding for a larger form */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow for a modern look */
+  width: 400px; /* Wider form */
+  margin: 50px auto; /* Center the form on the page */
+  animation: fadeIn 1s ease-in-out; /* Smooth fade-in animation */
+}
+
+.login-form h2 {
+  margin-bottom: 30px; /* Add more space below the heading */
+  font-size: 2rem; /* Larger font size for the heading */
+  color: #333; /* Darker text color */
+}
+
+.login-form input {
+  width: 100%;
+  padding: 15px; /* Larger padding for inputs */
+  margin-bottom: 20px; /* Add more space between inputs */
+  border: 1px solid #ccc; /* Subtle border */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 1rem; /* Larger font size for inputs */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+}
+
+.login-form button {
+  width: 100%;
+  padding: 15px; /* Larger padding for the button */
+  background-color: #133A1B; /* Smooth green for the button */
+  color: white;
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  font-size: 1.2rem; /* Larger font size for the button */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+}
+
+.login-form button:hover {
+  background-color: #45a049; /* Darker green on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.login-form button:active {
+  background-color: #3e8e41; /* Even darker green when clicked */
+  transform: scale(0.98); /* Slight shrink effect */
+}
+
+.login-form input:focus {
+  outline: none; /* Remove default outline */
+  border-color: #4caf50; /* Green border on focus */
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.5); /* Green glow effect */
+}
+
+.login-form p {
+  margin-top: 20px; /* Add space above the text */
+  font-size: 0.9rem; /* Smaller font size for additional text */
+  color: #666; /* Subtle gray color */
+  text-align: center;
+}
+
+.welcome-message {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.welcome-message h2 {
+  color: #4caf50;
+}
+
+.username-display {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #4caf50;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.like-button {
+  background-color: #133A1B; /* Zielony dla "Like" */
+  color: white;
+  border: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.like-button:hover {
+  background-color: #1b5126; /* Ciemniejszy zielony na hover */
+  transform: scale(1.05); /* Subtelne powiększenie */
+}
+
+.post-actions {
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+  gap: 10px; /* Odstęp między przyciskiem a liczbą polubień */
+  margin-top: 10px;
+}
+
+.post-comments {
+  margin-top: 5px; /* Zmniejsz odstęp od góry */
+  padding: 8px; /* Zmniejsz odstępy wewnętrzne */
+  background-color: #dcdcdc;
+  border-radius: 6px; /* Zmniejsz zaokrąglenie rogów */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtelniejszy cień */
+}
+
+.post-comments h4 {
+  margin-bottom: 5px; /* Zmniejsz odstęp poniżej nagłówka */
+  color: #333;
+  font-size: 0.9rem; /* Zmniejsz rozmiar czcionki */
+  cursor: pointer;
+  user-select: none; /* Wyłącz zaznaczanie tekstu */
+}
+
+.comment {
+  margin-bottom: 4px; /* Zmniejsz odstęp między komentarzami */
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+.comment:last-child {
+  border-bottom: none;
+}
+
+.comment p {
+  margin: 0;
+  color: #555;
+}
+
+.post-comments form {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.post-comments input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #cfcbcb;
+  border-radius: 4px;
+}
+
+.post-comments button {
+  padding: 8px 12px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.post-comments button:hover {
+  background-color: #45a049;
+}
+
+.site-title {
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* Czcionka w stylu Facebooka */
+  font-size: 1.5rem; /* Duży rozmiar czcionki */
+  font-weight: bold; /* Pogrubienie */
+  color: #E4DEAE; /* Niebieski kolor Facebooka */
+  text-align: center; /* Wyśrodkowanie tekstu */
+  margin: 10px 0; /* Odstępy wokół nazwy */
+}
+
+.site-title img {
+  max-width: 100px; /* Adjust the size of the logo */
+  height: auto;
+  display: inline-block;
+  vertical-align: middle; /* Align the logo with text if needed */
+}
+
+.site-logo {
+  width: 100%; /* 50% of the parent container */
+  max-width: 300px; /* Limit the maximum size */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.filter {
+  font-weight: bold;/* Increased spacing below the filter */
+}
+
+#categoryFilter {
+  font-weight:  bold; /* Bold font for the filter */
+  margin-bottom: 20px; /* Increased spacing below the filter */
+  padding: 10px; /* Increased padding for the filter */
+}
+
+/* App.css */
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode .navbar {
+  background-color: #1e1e1e;
+}
+
+.dark-mode .post {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+}
+
+.dark-mode .dark-mode-toggle {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
